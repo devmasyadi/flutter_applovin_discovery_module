@@ -6,7 +6,7 @@ import 'package:flutter_core_ads_manager/size_ads.dart';
 
 import 'flutter_applovin_module_platform_interface.dart';
 
-class FlutterApplovinModule {
+class FlutterApplovinDiscoveryModule {
   Future<String?> getPlatformVersion() {
     return FlutterApplovinModulePlatform.instance.getPlatformVersion();
   }

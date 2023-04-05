@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
   String _platformVersion = 'Unknown';
   bool _isShowBanner = false;
   bool _isShowNative = false;
-  final _flutterApplovinModulePlugin = FlutterApplovinModule();
+  final _flutterApplovinModulePlugin = FlutterApplovinDiscoveryModule();
 
   @override
   void initState() {
