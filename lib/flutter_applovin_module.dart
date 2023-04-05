@@ -8,51 +8,53 @@ import 'flutter_applovin_module_platform_interface.dart';
 
 class FlutterApplovinDiscoveryModule {
   Future<String?> getPlatformVersion() {
-    return FlutterApplovinModulePlatform.instance.getPlatformVersion();
+    return FlutterApplovinDiscoveryModulePlatform.instance.getPlatformVersion();
   }
 
   void initialize(
       BuildContext context, String? appId, IInitialize? iInitialize) {
-    return FlutterApplovinModulePlatform.instance
+    return FlutterApplovinDiscoveryModulePlatform.instance
         .initialize(context, appId, iInitialize);
   }
 
   void loadGdpr(BuildContext context, bool childDirected) {}
 
   void loadInterstitial(BuildContext context, String adUnitId) {
-    FlutterApplovinModulePlatform.instance.loadInterstitial(context, adUnitId);
+    FlutterApplovinDiscoveryModulePlatform.instance
+        .loadInterstitial(context, adUnitId);
   }
 
   void loadRewards(BuildContext context, String adUnitId) {
-    FlutterApplovinModulePlatform.instance.loadRewards(context, adUnitId);
+    FlutterApplovinDiscoveryModulePlatform.instance
+        .loadRewards(context, adUnitId);
   }
 
   Future<void> setTestDevices(BuildContext context, List<String> testDevices) {
-    return FlutterApplovinModulePlatform.instance
+    return FlutterApplovinDiscoveryModulePlatform.instance
         .setTestDevices(context, testDevices);
   }
 
   Widget showBanner(BuildContext context, SizeBanner sizeBanner,
       String adUnitId, CallbackAds? callbackAds) {
-    return FlutterApplovinModulePlatform.instance
+    return FlutterApplovinDiscoveryModulePlatform.instance
         .showBanner(context, sizeBanner, adUnitId, callbackAds);
   }
 
   void showInterstitial(
       BuildContext context, String adUnitId, CallbackAds? callbackAds) {
-    FlutterApplovinModulePlatform.instance
+    FlutterApplovinDiscoveryModulePlatform.instance
         .showInterstitial(context, adUnitId, callbackAds);
   }
 
   Widget showNativeAds(BuildContext context, SizeNative sizeNative,
       String adUnitId, CallbackAds? callbackAds) {
-    return FlutterApplovinModulePlatform.instance
+    return FlutterApplovinDiscoveryModulePlatform.instance
         .showNativeAds(context, sizeNative, adUnitId, callbackAds);
   }
 
   void showRewards(BuildContext context, String adUnitId,
       CallbackAds? callbackAds, IRewards? iRewards) {
-    FlutterApplovinModulePlatform.instance
+    FlutterApplovinDiscoveryModulePlatform.instance
         .showRewards(context, adUnitId, callbackAds, iRewards);
   }
 }
