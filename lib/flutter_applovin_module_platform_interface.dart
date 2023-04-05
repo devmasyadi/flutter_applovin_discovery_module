@@ -3,25 +3,25 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'flutter_applovin_module_method_channel.dart';
 
-abstract class FlutterApplovinModulePlatform extends PlatformInterface
+abstract class FlutterApplovinDiscoverModulePlatform extends PlatformInterface
     implements IAds {
-  /// Constructs a FlutterApplovinModulePlatform.
-  FlutterApplovinModulePlatform() : super(token: _token);
+  /// Constructs a FlutterApplovinDiscoverModulePlatform.
+  FlutterApplovinDiscoverModulePlatform() : super(token: _token);
 
   static final Object _token = Object();
 
-  static FlutterApplovinModulePlatform _instance =
+  static FlutterApplovinDiscoverModulePlatform _instance =
       MethodChannelFlutterApplovinModule();
 
-  /// The default instance of [FlutterApplovinModulePlatform] to use.
+  /// The default instance of [FlutterApplovinDiscoverModulePlatform] to use.
   ///
   /// Defaults to [MethodChannelFlutterApplovinModule].
-  static FlutterApplovinModulePlatform get instance => _instance;
+  static FlutterApplovinDiscoverModulePlatform get instance => _instance;
 
   /// Platform-specific implementations should set this with their own
-  /// platform-specific class that extends [FlutterApplovinModulePlatform] when
+  /// platform-specific class that extends [FlutterApplovinDiscoverModulePlatform] when
   /// they register themselves.
-  static set instance(FlutterApplovinModulePlatform instance) {
+  static set instance(FlutterApplovinDiscoverModulePlatform instance) {
     PlatformInterface.verifyToken(instance, _token);
     _instance = instance;
   }

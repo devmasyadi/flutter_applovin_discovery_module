@@ -11,7 +11,8 @@ import 'ads/native_view.dart';
 import 'flutter_applovin_module_platform_interface.dart';
 
 /// An implementation of [FlutterApplovinModulePlatform] that uses method channels.
-class MethodChannelFlutterApplovinModule extends FlutterApplovinModulePlatform {
+class MethodChannelFlutterApplovinModule
+    extends FlutterApplovinDiscoverModulePlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
   final methodChannel =
