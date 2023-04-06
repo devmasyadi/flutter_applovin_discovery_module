@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:flutter_applovin_module/flutter_applovin_module.dart';
+import 'package:flutter_applovin_discovery_module/flutter_applovin_module.dart';
 import 'package:flutter_core_ads_manager/callback_ads.dart';
 import 'package:flutter_core_ads_manager/iadsmanager/i_initialize.dart';
 import 'package:flutter_core_ads_manager/iadsmanager/i_rewards.dart';
@@ -23,7 +23,8 @@ class _MyAppState extends State<MyApp> {
   String _platformVersion = 'Unknown';
   bool _isShowBanner = false;
   bool _isShowNative = false;
-  final _flutterApplovinModulePlugin = FlutterApplovinDiscoveryModule();
+  final _flutterApplovinDiscoveryModulePlugin =
+      FlutterApplovinDiscoveryModule();
 
   @override
   void initState() {
@@ -38,7 +39,7 @@ class _MyAppState extends State<MyApp> {
     // We also handle the message potentially returning null.
     try {
       platformVersion =
-          await _flutterApplovinModulePlugin.getPlatformVersion() ??
+          await _flutterApplovinDiscoveryModulePlugin.getPlatformVersion() ??
               'Unknown platform version';
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
@@ -67,17 +68,17 @@ class _MyAppState extends State<MyApp> {
               Text('Running on: $_platformVersion\n'),
               ElevatedButton(
                 onPressed: () {
-                  _flutterApplovinModulePlugin.initialize(
+                  _flutterApplovinDiscoveryModulePlugin.initialize(
                     context,
                     "",
                     IInitialize(
                       onInitializationComplete: () async {
                         debugPrint('Initialization complete!');
-                        _flutterApplovinModulePlugin.setTestDevices(
+                        _flutterApplovinDiscoveryModulePlugin.setTestDevices(
                             context, ["f6d5e07a-cb29-4880-8b2a-04a686b91bc1"]);
-                        _flutterApplovinModulePlugin.loadInterstitial(
+                        _flutterApplovinDiscoveryModulePlugin.loadInterstitial(
                             context, "dbc8bcb664c0abe6");
-                        _flutterApplovinModulePlugin.loadRewards(
+                        _flutterApplovinDiscoveryModulePlugin.loadRewards(
                             context, "1363711600744576_1508879032894498");
                       },
                     ),
@@ -103,7 +104,7 @@ class _MyAppState extends State<MyApp> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  _flutterApplovinModulePlugin.showInterstitial(
+                  _flutterApplovinDiscoveryModulePlugin.showInterstitial(
                     context,
                     "dbc8bcb664c0abe6",
                     CallbackAds(
@@ -120,7 +121,7 @@ class _MyAppState extends State<MyApp> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  _flutterApplovinModulePlugin.showRewards(
+                  _flutterApplovinDiscoveryModulePlugin.showRewards(
                       context,
                       "1363711600744576_1508879032894498",
                       CallbackAds(
@@ -144,7 +145,7 @@ class _MyAppState extends State<MyApp> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   if (_isShowBanner)
-                    _flutterApplovinModulePlugin.showBanner(
+                    _flutterApplovinDiscoveryModulePlugin.showBanner(
                       context,
                       SizeBanner.SMALL,
                       "62c9e910bbd85680",
@@ -158,7 +159,7 @@ class _MyAppState extends State<MyApp> {
                       ),
                     ),
                   if (_isShowNative)
-                    _flutterApplovinModulePlugin.showNativeAds(
+                    _flutterApplovinDiscoveryModulePlugin.showNativeAds(
                       context,
                       SizeNative.SMALL_RECTANGLE,
                       "1363711600744576_1508905206225214",

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flutter_applovin_module_example">
+    package="com.example.flutter_applovin_discovery_module_example">
    <application
-        android:label="flutter_applovin_module_example"
+        android:label="flutter_applovin_discovery_module_example"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

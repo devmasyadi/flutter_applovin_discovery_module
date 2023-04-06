@@ -1,6 +1,6 @@
-# flutter_applovin_module_example
+# flutter_applovin_discovery_module_example
 
-Demonstrates how to use the flutter_applovin_module plugin.
+Demonstrates how to use the flutter_applovin_discovery_module plugin.
 
 ## Getting Started
 
