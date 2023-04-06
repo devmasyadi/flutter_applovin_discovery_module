@@ -1,4 +1,4 @@
-group 'com.example.flutter_applovin_module'
+group 'com.example.flutter_applovin_discovery_module'
 version '1.0-SNAPSHOT'
 
 buildscript {

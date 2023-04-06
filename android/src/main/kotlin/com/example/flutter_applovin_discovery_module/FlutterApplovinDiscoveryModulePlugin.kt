@@ -1,4 +1,4 @@
-package com.example.flutter_applovin_module
+package com.example.flutter_applovin_discovery_module
 
 import android.app.Activity
 import android.content.Context
@@ -16,8 +16,8 @@ import io.flutter.plugin.common.*
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 
-/** FlutterApplovinModulePlugin */
-class FlutterApplovinModulePlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
+/** FlutterApplovinDiscoveryModulePlugin */
+class FlutterApplovinDiscoveryModulePlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
   /// The MethodChannel that will the communication between Flutter and native Android
   ///
   /// This local reference serves to register the plugin with the Flutter Engine and unregister it

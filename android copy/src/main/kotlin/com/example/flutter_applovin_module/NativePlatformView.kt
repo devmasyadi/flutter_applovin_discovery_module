@@ -1,4 +1,4 @@
-package com.example.flutter_applovin_module
+package com.example.flutter_applovin_discovery_module
 
 import android.app.Activity
 import android.content.Context

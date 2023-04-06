@@ -1,7 +1,6 @@
+import 'package:flutter_applovin_discovery_module/flutter_applovin_module_method_channel.dart';
 import 'package:flutter_core_ads_manager/iadsmanager/i_ads.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-
-import 'flutter_applovin_module_method_channel.dart';
 
 abstract class FlutterApplovinDiscoveryModulePlatform extends PlatformInterface
     implements IAds {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_applovin_discovery_module/flutter_applovin_module_platform_interface.dart';
 import 'package:flutter_core_ads_manager/rewards/rewards_item.dart';
 import 'package:flutter_core_ads_manager/size_ads.dart';
 import 'package:flutter_core_ads_manager/iadsmanager/i_rewards.dart';
@@ -8,7 +9,6 @@ import 'package:flutter_core_ads_manager/callback_ads.dart';
 
 import 'ads/banner_view.dart';
 import 'ads/native_view.dart';
-import 'flutter_applovin_module_platform_interface.dart';
 
 /// An implementation of [FlutterApplovinModulePlatform] that uses method channels.
 class MethodChannelFlutterApplovinModule

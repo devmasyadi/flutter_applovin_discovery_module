@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_applovin_discovery_module/flutter_applovin_module_platform_interface.dart';
 import 'package:flutter_core_ads_manager/callback_ads.dart';
 import 'package:flutter_core_ads_manager/iadsmanager/i_initialize.dart';
 import 'package:flutter_core_ads_manager/iadsmanager/i_rewards.dart';
 import 'package:flutter_core_ads_manager/size_ads.dart';
-
-import 'flutter_applovin_module_platform_interface.dart';
 
 class FlutterApplovinDiscoveryModule {
   Future<String?> getPlatformVersion() {

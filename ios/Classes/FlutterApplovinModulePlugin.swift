@@ -1,10 +1,10 @@
 import Flutter
 import UIKit
 
-public class FlutterApplovinModulePlugin: NSObject, FlutterPlugin {
+public class FlutterApplovinDiscoveryModulePlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "flutter_applovin_module", binaryMessenger: registrar.messenger())
-    let instance = FlutterApplovinModulePlugin()
+    let channel = FlutterMethodChannel(name: "flutter_applovin_discovery_module", binaryMessenger: registrar.messenger())
+    let instance = FlutterApplovinDiscoveryModulePlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 

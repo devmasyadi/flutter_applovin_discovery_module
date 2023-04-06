@@ -1,4 +1,4 @@
-package com.example.flutter_applovin_module
+package com.example.flutter_applovin_discovery_module
 
 import android.app.Activity
 import android.content.Context
@@ -16,13 +16,13 @@ import io.flutter.plugin.common.*
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 
-/** FlutterApplovinModulePlugin */
-class FlutterApplovinModulePlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
+/** FlutterApplovinDiscoveryModulePlugin */
+class FlutterApplovinDiscoveryModulePlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
   /// The MethodChannel that will the communication between Flutter and native Android
   ///
   /// This local reference serves to register the plugin with the Flutter Engine and unregister it
   /// when the Flutter Engine is detached from the Activity
-  private val CALLBACK_CHANNEL = "flutter_applovin_module_callback"
+  private val CALLBACK_CHANNEL = "flutter_applovin_discovery_module_callback"
   private lateinit var channel : MethodChannel
   private lateinit var applovinMaxAds: ApplovinMaxAds
   private lateinit var context: Context
@@ -32,7 +32,7 @@ class FlutterApplovinModulePlugin: FlutterPlugin, MethodCallHandler, ActivityAwa
   private lateinit var flutterPluginBinding: FlutterPlugin.FlutterPluginBinding
 
   override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "flutter_applovin_module")
+    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "flutter_applovin_discovery_module")
     this.flutterPluginBinding = flutterPluginBinding
     binaryMessenger = flutterPluginBinding.binaryMessenger
     channel.setMethodCallHandler(this)

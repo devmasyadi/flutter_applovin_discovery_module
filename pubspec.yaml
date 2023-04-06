@@ -37,10 +37,10 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.example.flutter_applovin_module
-        pluginClass: FlutterApplovinModulePlugin
+        package: com.example.flutter_applovin_discovery_module
+        pluginClass: FlutterApplovinDiscoveryModulePlugin
       ios:
-        pluginClass: FlutterApplovinModulePlugin
+        pluginClass: FlutterApplovinDiscoveryModulePlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
